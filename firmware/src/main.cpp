@@ -14,7 +14,7 @@
 
 // i2s config for using the internal ADC
 i2s_config_t adcI2SConfig = {
-    .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX | I2S_MODE_ADC_BUILT_IN),
+    .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX),
     .sample_rate = 16000,
     .bits_per_sample = I2S_BITS_PER_SAMPLE_16BIT,
     .channel_format = I2S_CHANNEL_FMT_ONLY_LEFT,
@@ -113,9 +113,9 @@ void setup()
 
   // and the intent processor
   IntentProcessor *intent_processor = new IntentProcessor(speaker);
-  intent_processor->addDevice("kitchen", GPIO_NUM_5);
-  intent_processor->addDevice("bedroom", GPIO_NUM_21);
-  intent_processor->addDevice("table", GPIO_NUM_23);
+  intent_processor->addDevice("kitchen", GPIO_NUM_13);
+  intent_processor->addDevice("bedroom", GPIO_NUM_12);
+  intent_processor->addDevice("table", GPIO_NUM_11);
 
   // create our application
   Application *application = new Application(i2s_sampler, intent_processor, speaker, indicator_light);

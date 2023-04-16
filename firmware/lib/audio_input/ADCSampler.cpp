@@ -10,10 +10,10 @@ ADCSampler::ADCSampler(adc_unit_t adcUnit, adc1_channel_t adcChannel) : I2SSampl
 
 void ADCSampler::configureI2S()
 {
-    //init ADC pad
-    i2s_set_adc_mode(m_adcUnit, m_adcChannel);
-    // enable the adc
-    i2s_adc_enable(getI2SPort());
+    // //init ADC pad
+    // i2s_set_adc_mode(m_adcUnit, m_adcChannel);
+    // // enable the adc
+    // i2s_adc_enable(getI2SPort());
 }
 
 /**

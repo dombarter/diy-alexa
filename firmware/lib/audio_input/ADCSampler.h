@@ -2,6 +2,8 @@
 #define __adc_sampler_h__
 
 #include "I2SSampler.h"
+#include "driver/i2s.h"
+#include "driver/adc.h"
 
 class ADCSampler : public I2SSampler
 {
