@@ -58,18 +58,6 @@ IntentResult IntentProcessor::turnOnDevice(const Intent &intent)
     return SUCCESS;
 }
 
-IntentResult IntentProcessor::tellJoke()
-{
-    m_speaker->playRandomJoke();
-    return SILENT_SUCCESS;
-}
-
-IntentResult IntentProcessor::life()
-{
-    m_speaker->playLife();
-    return SILENT_SUCCESS;
-}
-
 IntentResult IntentProcessor::processIntent(const Intent &intent)
 {
     if (intent.text.empty())
@@ -87,14 +75,6 @@ IntentResult IntentProcessor::processIntent(const Intent &intent)
     if (intent.intent_name == "Turn_on_device")
     {
         return turnOnDevice(intent);
-    }
-    if (intent.intent_name == "Tell_joke")
-    {
-        return tellJoke();
-    }
-    if (intent.intent_name == "Life")
-    {
-        return life();
     }
 
     return FAILED;
