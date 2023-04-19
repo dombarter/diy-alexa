@@ -5,6 +5,7 @@
 IntentProcessor::IntentProcessor(Speaker *speaker)
 {
     m_speaker = speaker;
+    pinMode(GPIO_NUM_13, OUTPUT);
 }
 
 IntentResult IntentProcessor::toggleLights(const Intent &intent) {
@@ -52,10 +53,4 @@ IntentResult IntentProcessor::processIntent(const Intent &intent)
     }
 
     return FAILED;
-}
-
-void IntentProcessor::addDevice(const std::string &name, int gpio_pin)
-{
-    m_device_to_pin.insert(std::make_pair(name, gpio_pin));
-    pinMode(gpio_pin, OUTPUT);
 }
