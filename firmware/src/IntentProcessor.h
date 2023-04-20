@@ -25,7 +25,7 @@ private:
 
 public:
     IntentProcessor(Speaker *speaker);
-    void addDevice(const std::string &name, int gpio_pin);
+    void toggleLights(const std::string &name, int gpio_pin);
     IntentResult processIntent(const Intent &intent);
 };
 
