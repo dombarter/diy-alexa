@@ -21,8 +21,6 @@ public:
     void playOK();
     void playReady();
     void playCantDo();
-    void playRandomJoke();
-    void playLife();
 };
 
 #endif
